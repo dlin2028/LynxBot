@@ -21,7 +21,7 @@ namespace HTMS
             client.Log += Log;
             client.MessageReceived += MsgRecieved;
 
-            await client.LoginAsync(TokenType.Bot, "NzI0MTgyODQyNjQ0NDk2NDY0.Xu8pug.8-gWy76J6aAUBp3x6wmj3TiSWoQ");
+            await client.LoginAsync(TokenType.Bot, "NzI0MTgyODQyNjQ0NDk2NDY0.Xu8xKg.VI9KhInNiMO6TZsv_SQe2WBG6gs");
             await client.StartAsync();
             await Task.Delay(-1);
         }
